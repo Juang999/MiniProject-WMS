@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="{{ asset('fontawesome-free/css/all.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('css/adminlte.min.css') }}">
-
+    <!-- Style Stack -->
+    @stack('styles')
     <!-- Livewire Style -->
     @livewireStyles
 </head>

@@ -30,7 +30,7 @@ new class extends Component
     <section class="content">
 
         <!-- Default box -->
-        {{-- <div class="card">
+        <div class="card">
             <div class="card-header">
                 <h3 class="card-title">Title</h3>
 
@@ -51,7 +51,7 @@ new class extends Component
                 Footer
             </div>
             <!-- /.card-footer-->
-        </div> --}}
+        </div>
         <!-- /.card -->
 
     </section>

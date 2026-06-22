@@ -8,6 +8,7 @@ Route::get('/', [AuthenticatedSessionController::class, 'create']);
 Route::post('login', [AuthenticatedSessionController::class, 'store']);
 
 Route::livewire('/dashboard', 'pages::dashboard.index')->middleware(['auth', 'verified'])->name('dashboard');
+Route::livewire('/master-products', 'pages::master_products.index')->middleware(['auth', 'verified'])->name('master-products');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
