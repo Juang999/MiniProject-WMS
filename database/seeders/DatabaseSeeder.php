@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\{User, MasterProduct, StockTransaction};
+use App\Models\{User, MasterData\MasterProduct, StockTransaction};
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 

@@ -3,7 +3,7 @@
     <a href="../../index3.html" class="brand-link">
         <img src="{{ asset('img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
             style="opacity: .8">
-        <span class="brand-text font-weight-light">AdminLTE 3</span>
+        <span class="brand-text font-weight-light">Heimdall WMS</span>
     </a>
 
     <!-- Sidebar -->
@@ -14,7 +14,7 @@
                 <img src="{{ asset('img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="#" class="d-block">Bangkit Juang Raharjo</a>
             </div>
         </div>
 
@@ -41,13 +41,34 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="/master-products" class="nav-link">
+                <li class="nav-item @if (in_array($title, ['Master Product', 'Categories', 'Locations'])) menu-open @endif">
+                    <a href="#" class="nav-link @if (in_array($title, ['Master Product', 'Categories', 'Locations'])) active @endif">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
-                            Master Product
+                            Master Data
+                            <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/master-products" class="nav-link @if ($title === 'Master Product') active @endif">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Master Product</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/categories" class="nav-link @if ($title === 'Categories') active @endif">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Categories</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/locations" class="nav-link @if ($title === 'Locations') active @endif">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Locations</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">

@@ -18,7 +18,7 @@ class StockTransactionFactory extends Factory
     public function definition(): array
     {
         return [
-            'product_id' => \App\Models\MasterProduct::factory(),
+            'product_id' => \App\Models\MasterData\MasterProduct::factory(),
             'quantity' => $this->faker->numberBetween(1, 100),
         ];
     }

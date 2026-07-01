@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mini-Project WMS | Blank Page</title>
+    <title>Mini-Project WMS | {{ $title }}</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -28,7 +28,7 @@
         <!-- /.navbar -->
 
         <!-- Sidebar -->
-        @include('components.sidebar')
+        @include('components.sidebar', ['title' => $title])
         <!-- /.Sidebar -->
 
         <!-- Main Content -->
@@ -62,9 +62,10 @@
     <script src="{{ asset('js/adminlte.min.js') }}"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('js/demo.js') }}"></script>
-
     <!-- Livewire Script -->
     @livewireScripts
+    <!-- Script Stack -->
+    @stack('scripts')
 </body>
 
 </html>
